@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e6f4ff, #cce0ff);
+  margin: 0;
+  padding: 20px;
+  color: #1e3a5f;
+}
+
+.container {
+  max-width: 450px;
+  margin: auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 16px rgba(0, 0, 50, 0.1);
+  border: 2px solid #d0e6f6;
+}
+
+h1 {
+  text-align: center;
+  color: #0055aa;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input, button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #aacce6;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3399ff;
+  box-shadow: 0 0 4px #66bfff;
+}
+
+button {
+  background-color: #3399ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #267acc;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.reminders {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.reminders li {
+  background: #e6f2ff;
+  border-left: 4px solid #3399ff;
+  padding: 10px 14px;
+  margin: 5px 0;
+  border-radius: 6px;
+  position: relative;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: #d11a2a;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #ff0000;
+}
+
+#visualAlert {
+  text-align: center;
+  background-color: #ff6f61;
+  color: white;
+  padding: 16px;
+  font-weight: bold;
+  margin-top: 25px;
+  border-radius: 10px;
+  display: none;
+  animation: fadein 0.5s ease-in-out;
+}
+
+#visualAlert.show {
+  display: block;
+}
+
+#emptyMsg {
+  text-align: center;
+  color: #666;
+  margin-top: 10px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}

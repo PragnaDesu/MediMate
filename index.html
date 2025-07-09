@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediMate – Medication Reminder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💊 MediMate</h1>
+    <p class="tagline">Your Daily Medication Buddy</p>
+    
+    <form id="reminderForm">
+      <input type="text" id="medName" placeholder="Enter Medicine Name" required />
+      <input type="time" id="medTime" required />
+      <button type="submit">➕ Add Reminder</button>
+    </form>
+
+    <div class="section">
+      <h2>⏰ Today's Reminders</h2>
+      <ul id="reminderList" class="reminders"></ul>
+      <p id="emptyMsg">No reminders set yet.</p>
+    </div>
+
+    <div id="visualAlert" class="hidden">🔔 Time to take your medicine!</div>
+  </div>
+  <script src="script.js"></script>
+  <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+</body>
+</html>
